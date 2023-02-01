@@ -1,15 +1,21 @@
 import "./App.css";
-import Kakao from "./components/Kakao";
-import Google from "./components/Google";
-import Facebook from "./components/facebook";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Naver from "./components/naver";
+import AuthPage from "./components/AuthPage";
 function App() {
   return (
-    <div className="App">
-      <h1>SNS 로그인 테스트</h1>
-      <Kakao />
-      <Facebook />
-      <Google />
-    </div>
+    <>
+      <BrowserRouter>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/login/naver" element={<Naver />}></Route>
+            <Route path="/user" element={<AuthPage />}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 

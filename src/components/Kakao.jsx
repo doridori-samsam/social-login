@@ -1,5 +1,8 @@
 import kakaoLogo from "../assets/kakao-logo.svg";
 function Kakao() {
+  function onClick() {
+    ㅈ디;                                                                                                                                                                                                                                 ㅏ
+  }
   return (
     <button className="btn-wrapper">
       <img src={kakaoLogo} className="logo-img" width="40" height="38" />
