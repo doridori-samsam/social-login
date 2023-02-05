@@ -1,12 +1,15 @@
-import kakaoLogo from "../assets/kakao-logo.svg";
+import kakaoLogo from "../assets/kakao-logo.png";
 function Kakao() {
-  function onClick() {
-    ㅈ디;                                                                                                                                                                                                                                 ㅏ
-  }
+  const { Kakao } = window;
+  console.log(Kakao);
+  const kakaoLogin = () => {
+    Kakao.Auth.authorize({
+      redirectUri: "http://localhost:5173/user",
+    });
+  };
   return (
-    <button className="btn-wrapper">
-      <img src={kakaoLogo} className="logo-img" width="40" height="38" />
-      <span className="btn-txt">카카오톡 로그인하기</span>
+    <button type="button" onClick={kakaoLogin}>
+      <img src={kakaoLogo} className="logo-img" width="250" />
     </button>
   );
 }

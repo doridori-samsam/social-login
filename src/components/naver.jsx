@@ -18,13 +18,13 @@ function Naver() {
 
     naverLogin.init();
     /**user정보를 authpage에 보내줘야 함.... */
-    naverLogin.getLoginStatus((status) => {
-      if (status) {
-        const { id, email } = naverLogin.user;
-        console.log(id, email);
-        console.log(naverLogin.user);
-      }
-    });
+    // naverLogin.getLoginStatus((status) => {
+    //   if (status) {
+    //     const { id, email } = naverLogin.user;
+    //     console.log(id, email);
+    //     console.log(naverLogin.user);
+    //   }
+    // });
   }
   const userProfile = () => {
     window.location.href.includes("access_token") && GetUser();

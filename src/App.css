@@ -43,3 +43,12 @@ h1 {
 
   line-height: 55px;
 }
+
+.user-info {
+  font-size: 25px;
+}
+
+.user-img {
+  width: 380px;
+  border-radius: 50px;
+}
