@@ -4,7 +4,7 @@ function Kakao() {
   console.log(Kakao);
   const kakaoLogin = () => {
     const res = Kakao.Auth.authorize({
-      redirectUri: "http://localhost:5173/kakao_user",
+      redirectUri: import.meta.VITE_KAKAO_CALLBACK,
     });
     console.log(res);
   };
