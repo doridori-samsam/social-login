@@ -3,9 +3,10 @@ function Kakao() {
   const { Kakao } = window;
   console.log(Kakao);
   const kakaoLogin = () => {
-    Kakao.Auth.authorize({
-      redirectUri: "http://localhost:5173/user",
+    const res = Kakao.Auth.authorize({
+      redirectUri: "http://localhost:5173/kakao_user",
     });
+    console.log(res);
   };
   return (
     <button type="button" onClick={kakaoLogin}>

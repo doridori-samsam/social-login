@@ -5,10 +5,10 @@ import "./index.css";
 //Facebook Login
 // window.fbAsyncInit = function () {
 //   FB.init({
-//     appId: "{your-app-id}",
+//     appId: "961195221924157",
 //     cookie: true,
 //     xfbml: true,
-//     version: "{api-version}",
+//     version: "v10.0",
 //   });
 
 //   FB.AppEvents.logPageView();
@@ -26,7 +26,17 @@ import "./index.css";
 //   fjs.parentNode.insertBefore(js, fjs);
 // })(document, "script", "facebook-jssdk");
 
-Kakao.init("bc45513e78dbf13556c955d3d28d5577");
+//naver login
+const naverLogin = new naver.LoginWithNaverId({
+  clientId: import.meta.env.VITE_NAVER_CLIENT_ID,
+  callbackUrl: import.meta.env.VITE_CALLBACK_URL,
+  isPopup: true,
+  callbackHandle: true,
+});
+naverLogin.init();
+
+//kakao login
+Kakao.init(import.meta.env.VITE_KAKAO_JS);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

@@ -1,7 +1,7 @@
 import Naver from "./Naver";
 import Facebook from "./Facebook";
 import Kakao from "./Kakao";
-import Google from "./Google";
+
 function Home() {
   return (
     <>
@@ -9,7 +9,6 @@ function Home() {
       <Naver />
       <Kakao />
       <Facebook />
-      <Google />
     </>
   );
 }

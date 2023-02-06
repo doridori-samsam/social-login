@@ -5,7 +5,7 @@ function NaverUser() {
   const CALLBACK_URL = import.meta.env.VITE_CALLBACK_URL;
   const { naver } = window;
   const [userInfo, setUserInfo] = useState({});
-
+  console.log(naver);
   const naverLogin = new naver.LoginWithNaverId({
     clientId: CLIENT_ID,
     callbackUrl: CALLBACK_URL,
@@ -13,6 +13,7 @@ function NaverUser() {
     callbackHandle: true,
   });
 
+  console.log(naverLogin);
   // naverLogin.getLoginStatus((status) => {
   //   if (status) {
   //     console.log(status);

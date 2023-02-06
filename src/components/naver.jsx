@@ -6,16 +6,15 @@ function Naver() {
   const CLIENT_ID = import.meta.env.VITE_NAVER_CLIENT_ID;
   const CALLBACK_URL = import.meta.env.VITE_CALLBACK_URL;
   const { naver } = window;
+  const naverLogin = new naver.LoginWithNaverId({
+    clientId: CLIENT_ID,
+    callbackUrl: CALLBACK_URL,
+    isPopup: false,
+    loginButton: { color: "green", type: 3, height: "60" },
+    callbackHandle: true,
+  });
 
   function initializeNaverLogin() {
-    const naverLogin = new naver.LoginWithNaverId({
-      clientId: CLIENT_ID,
-      callbackUrl: CALLBACK_URL,
-      isPopup: false,
-      loginButton: { color: "green", type: 3, height: "60" },
-      callbackHandle: true,
-    });
-
     naverLogin.init();
     /**user정보를 authpage에 보내줘야 함.... */
     // naverLogin.getLoginStatus((status) => {

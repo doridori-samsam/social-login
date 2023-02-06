@@ -1,11 +1,20 @@
 import facebookLogo from "../assets/facebook-logo.svg";
-
+import { useEffect } from "react";
 function Facebook() {
+  function fbLogin() {
+    FB.login((res) => console.log(res));
+  }
+
   return (
-    <button className="btn-wrapper">
-      <img src={facebookLogo} className="logo-img" width="40" height="38" />
-      <span className="btn-txt">페이스북 로그인하기</span>
-    </button>
+    <div
+      className="fb-login-button"
+      data-width=""
+      data-size="large"
+      data-button-type="login_with"
+      data-layout="rounded"
+      data-auto-logout-link="false"
+      data-use-continue-as="false"
+    ></div>
   );
 }
 
