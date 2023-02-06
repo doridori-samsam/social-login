@@ -1,10 +1,11 @@
 import kakaoLogo from "../assets/kakao-logo.png";
 function Kakao() {
   const { Kakao } = window;
+
   console.log(Kakao);
   const kakaoLogin = () => {
     const res = Kakao.Auth.authorize({
-      redirectUri: import.meta.VITE_KAKAO_CALLBACK,
+      redirectUri: import.meta.env.VITE_KAKAO_CALLBACK,
     });
     console.log(res);
   };
